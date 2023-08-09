@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import uploadLogo from './upload.png';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='wrapper'>
+			<form>
+				<h1>React drop files input</h1>
+				<div className='drugDrop'>
+					<img src={uploadLogo} className='uploadLogo' alt='logo' />
+					<h2>Drag and drop your files here</h2>
+				</div>
+
+				<p>Ready to upload</p>
+				<label>
+					<span>Upload your files</span>
+					<input type='files' className='input' multiple={true} />
+				</label>
+			</form>
+		</div>
+	);
 }
 
 export default App;
